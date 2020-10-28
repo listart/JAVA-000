@@ -6,3 +6,7 @@ target
 
 # IDEA
 .idea
+*.iml
+
+# jupyter notebook
+.ipynb_checkpoints

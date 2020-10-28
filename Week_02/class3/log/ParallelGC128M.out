@@ -1,0 +1,4 @@
+正在执行...
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at GCLogAnalysis.generateGarbage(GCLogAnalysis.java:42)
+	at GCLogAnalysis.main(GCLogAnalysis.java:25)

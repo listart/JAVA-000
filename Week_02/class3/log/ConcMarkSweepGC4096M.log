@@ -1,0 +1,21 @@
+Java HotSpot(TM) 64-Bit Server VM (25.251-b08) for bsd-amd64 JRE (1.8.0_251-b08), built on Mar 12 2020 02:36:37 by "java_re" with gcc 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)
+Memory: 4k page, physical 16777216k(1109296k free)
+
+/proc/meminfo:
+
+CommandLine flags: -XX:InitialHeapSize=4294967296 -XX:MaxHeapSize=4294967296 -XX:MaxNewSize=348966912 -XX:MaxTenuringThreshold=6 -XX:NewSize=348966912 -XX:OldPLABSize=16 -XX:OldSize=697933824 -XX:+PrintGC -XX:+PrintGCDateStamps -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:+UseParNewGC 
+2020-10-27T11:48:07.614-0800: 0.302: [GC (Allocation Failure) 2020-10-27T11:48:07.614-0800: 0.303: [ParNew: 272640K->34048K(306688K), 0.0448997 secs] 272640K->84895K(4160256K), 0.0450932 secs] [Times: user=0.09 sys=0.08, real=0.04 secs] 
+2020-10-27T11:48:07.717-0800: 0.405: [GC (Allocation Failure) 2020-10-27T11:48:07.717-0800: 0.405: [ParNew: 306688K->34048K(306688K), 0.0545601 secs] 357535K->164774K(4160256K), 0.0546806 secs] [Times: user=0.11 sys=0.08, real=0.06 secs] 
+2020-10-27T11:48:07.819-0800: 0.508: [GC (Allocation Failure) 2020-10-27T11:48:07.819-0800: 0.508: [ParNew: 306688K->34047K(306688K), 0.0752490 secs] 437414K->242830K(4160256K), 0.0753754 secs] [Times: user=0.13 sys=0.03, real=0.08 secs] 
+2020-10-27T11:48:07.992-0800: 0.681: [GC (Allocation Failure) 2020-10-27T11:48:07.992-0800: 0.681: [ParNew: 306687K->34048K(306688K), 0.0720759 secs] 515470K->319523K(4160256K), 0.0722181 secs] [Times: user=0.17 sys=0.03, real=0.07 secs] 
+2020-10-27T11:48:08.110-0800: 0.799: [GC (Allocation Failure) 2020-10-27T11:48:08.110-0800: 0.799: [ParNew: 306688K->34048K(306688K), 0.0708583 secs] 592163K->400081K(4160256K), 0.0709939 secs] [Times: user=0.23 sys=0.03, real=0.07 secs] 
+2020-10-27T11:48:08.225-0800: 0.914: [GC (Allocation Failure) 2020-10-27T11:48:08.225-0800: 0.914: [ParNew: 306688K->34048K(306688K), 0.0709531 secs] 672721K->479793K(4160256K), 0.0710757 secs] [Times: user=0.23 sys=0.03, real=0.07 secs] 
+2020-10-27T11:48:08.337-0800: 1.026: [GC (Allocation Failure) 2020-10-27T11:48:08.337-0800: 1.026: [ParNew: 306634K->34048K(306688K), 0.0703818 secs] 752380K->562014K(4160256K), 0.0705233 secs] [Times: user=0.23 sys=0.04, real=0.07 secs] 
+Heap
+ par new generation   total 306688K, used 147790K [0x00000006c0000000, 0x00000006d4cc0000, 0x00000006d4cc0000)
+  eden space 272640K,  41% used [0x00000006c0000000, 0x00000006c6f138a8, 0x00000006d0a40000)
+  from space 34048K, 100% used [0x00000006d2b80000, 0x00000006d4cc0000, 0x00000006d4cc0000)
+  to   space 34048K,   0% used [0x00000006d0a40000, 0x00000006d0a40000, 0x00000006d2b80000)
+ concurrent mark-sweep generation total 3853568K, used 527966K [0x00000006d4cc0000, 0x00000007c0000000, 0x00000007c0000000)
+ Metaspace       used 2728K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 296K, capacity 386K, committed 512K, reserved 1048576K

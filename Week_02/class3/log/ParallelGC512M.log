@@ -1,0 +1,48 @@
+Java HotSpot(TM) 64-Bit Server VM (25.251-b08) for bsd-amd64 JRE (1.8.0_251-b08), built on Mar 12 2020 02:36:37 by "java_re" with gcc 4.2.1 (Based on Apple Inc. build 5658) (LLVM build 2336.11.00)
+Memory: 4k page, physical 16777216k(1105036k free)
+
+/proc/meminfo:
+
+CommandLine flags: -XX:InitialHeapSize=536870912 -XX:MaxHeapSize=536870912 -XX:+PrintGC -XX:+PrintGCDateStamps -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseParallelGC 
+2020-10-27T11:47:58.492-0800: 0.194: [GC (Allocation Failure) [PSYoungGen: 131584K->21503K(153088K)] 131584K->45238K(502784K), 0.0166888 secs] [Times: user=0.02 sys=0.04, real=0.01 secs] 
+2020-10-27T11:47:58.531-0800: 0.233: [GC (Allocation Failure) [PSYoungGen: 152488K->21501K(153088K)] 176223K->88310K(502784K), 0.0237037 secs] [Times: user=0.03 sys=0.06, real=0.02 secs] 
+2020-10-27T11:47:58.577-0800: 0.279: [GC (Allocation Failure) [PSYoungGen: 153085K->21493K(153088K)] 219894K->133025K(502784K), 0.0203095 secs] [Times: user=0.03 sys=0.05, real=0.02 secs] 
+2020-10-27T11:47:58.620-0800: 0.322: [GC (Allocation Failure) [PSYoungGen: 153077K->21491K(153088K)] 264609K->174528K(502784K), 0.0196299 secs] [Times: user=0.03 sys=0.04, real=0.01 secs] 
+2020-10-27T11:47:58.661-0800: 0.363: [GC (Allocation Failure) [PSYoungGen: 153075K->21492K(153088K)] 306112K->214299K(502784K), 0.0185147 secs] [Times: user=0.03 sys=0.04, real=0.01 secs] 
+2020-10-27T11:47:58.702-0800: 0.404: [GC (Allocation Failure) [PSYoungGen: 153076K->21502K(80384K)] 345883K->264541K(430080K), 0.0220766 secs] [Times: user=0.04 sys=0.05, real=0.02 secs] 
+2020-10-27T11:47:58.735-0800: 0.437: [GC (Allocation Failure) [PSYoungGen: 80370K->29116K(116736K)] 323408K->280363K(466432K), 0.0080246 secs] [Times: user=0.02 sys=0.01, real=0.01 secs] 
+2020-10-27T11:47:58.753-0800: 0.455: [GC (Allocation Failure) [PSYoungGen: 87996K->48974K(116736K)] 339243K->303554K(466432K), 0.0091617 secs] [Times: user=0.03 sys=0.00, real=0.01 secs] 
+2020-10-27T11:47:58.772-0800: 0.475: [GC (Allocation Failure) [PSYoungGen: 107854K->57372K(116736K)] 362434K->319354K(466432K), 0.0117285 secs] [Times: user=0.04 sys=0.01, real=0.01 secs] 
+2020-10-27T11:47:58.794-0800: 0.496: [GC (Allocation Failure) [PSYoungGen: 116252K->39911K(116736K)] 378234K->337559K(466432K), 0.0178329 secs] [Times: user=0.03 sys=0.03, real=0.02 secs] 
+2020-10-27T11:47:58.812-0800: 0.514: [Full GC (Ergonomics) [PSYoungGen: 39911K->0K(116736K)] [ParOldGen: 297647K->242338K(349696K)] 337559K->242338K(466432K), [Metaspace: 2722K->2722K(1056768K)], 0.0433062 secs] [Times: user=0.15 sys=0.01, real=0.04 secs] 
+2020-10-27T11:47:58.866-0800: 0.569: [GC (Allocation Failure) [PSYoungGen: 58880K->14885K(116736K)] 301218K->257223K(466432K), 0.0034043 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+2020-10-27T11:47:58.881-0800: 0.583: [GC (Allocation Failure) [PSYoungGen: 73637K->17238K(116736K)] 315976K->273702K(466432K), 0.0057526 secs] [Times: user=0.02 sys=0.00, real=0.00 secs] 
+2020-10-27T11:47:58.896-0800: 0.599: [GC (Allocation Failure) [PSYoungGen: 76118K->18430K(116736K)] 332582K->290562K(466432K), 0.0061834 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+2020-10-27T11:47:58.913-0800: 0.615: [GC (Allocation Failure) [PSYoungGen: 77310K->23698K(116736K)] 349442K->313606K(466432K), 0.0072744 secs] [Times: user=0.03 sys=0.00, real=0.01 secs] 
+2020-10-27T11:47:58.930-0800: 0.633: [GC (Allocation Failure) [PSYoungGen: 82578K->17459K(116736K)] 372486K->329453K(466432K), 0.0096169 secs] [Times: user=0.02 sys=0.01, real=0.01 secs] 
+2020-10-27T11:47:58.940-0800: 0.642: [Full GC (Ergonomics) [PSYoungGen: 17459K->0K(116736K)] [ParOldGen: 311994K->268148K(349696K)] 329453K->268148K(466432K), [Metaspace: 2722K->2722K(1056768K)], 0.0428716 secs] [Times: user=0.16 sys=0.01, real=0.04 secs] 
+2020-10-27T11:47:58.992-0800: 0.695: [GC (Allocation Failure) [PSYoungGen: 58604K->19077K(116736K)] 326753K->287225K(466432K), 0.0038292 secs] [Times: user=0.02 sys=0.00, real=0.00 secs] 
+2020-10-27T11:47:59.007-0800: 0.709: [GC (Allocation Failure) [PSYoungGen: 77800K->18398K(116736K)] 345949K->304966K(466432K), 0.0063852 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+2020-10-27T11:47:59.024-0800: 0.726: [GC (Allocation Failure) [PSYoungGen: 77278K->19421K(116736K)] 363846K->323279K(466432K), 0.0063228 secs] [Times: user=0.02 sys=0.00, real=0.01 secs] 
+2020-10-27T11:47:59.030-0800: 0.732: [Full GC (Ergonomics) [PSYoungGen: 19421K->0K(116736K)] [ParOldGen: 303858K->281875K(349696K)] 323279K->281875K(466432K), [Metaspace: 2722K->2722K(1056768K)], 0.0437701 secs] [Times: user=0.17 sys=0.00, real=0.04 secs] 
+2020-10-27T11:47:59.084-0800: 0.787: [GC (Allocation Failure) [PSYoungGen: 58880K->20295K(116736K)] 340755K->302171K(466432K), 0.0039890 secs] [Times: user=0.01 sys=0.00, real=0.00 secs] 
+2020-10-27T11:47:59.099-0800: 0.801: [GC (Allocation Failure) [PSYoungGen: 79175K->17971K(116736K)] 361051K->318615K(466432K), 0.0064274 secs] [Times: user=0.03 sys=0.00, real=0.01 secs] 
+2020-10-27T11:47:59.115-0800: 0.817: [GC (Allocation Failure) [PSYoungGen: 76383K->16487K(116736K)] 377027K->334435K(466432K), 0.0071441 secs] [Times: user=0.02 sys=0.01, real=0.01 secs] 
+2020-10-27T11:47:59.122-0800: 0.824: [Full GC (Ergonomics) [PSYoungGen: 16487K->0K(116736K)] [ParOldGen: 317947K->293040K(349696K)] 334435K->293040K(466432K), [Metaspace: 2722K->2722K(1056768K)], 0.0448372 secs] [Times: user=0.16 sys=0.00, real=0.04 secs] 
+2020-10-27T11:47:59.177-0800: 0.879: [GC (Allocation Failure) [PSYoungGen: 58880K->20167K(116736K)] 351920K->313208K(466432K), 0.0038298 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+2020-10-27T11:47:59.192-0800: 0.894: [GC (Allocation Failure) [PSYoungGen: 78810K->21309K(116736K)] 371850K->333128K(466432K), 0.0073570 secs] [Times: user=0.02 sys=0.00, real=0.00 secs] 
+2020-10-27T11:47:59.209-0800: 0.912: [GC (Allocation Failure) [PSYoungGen: 80189K->19519K(116736K)] 392008K->351873K(466432K), 0.0098937 secs] [Times: user=0.02 sys=0.01, real=0.01 secs] 
+2020-10-27T11:47:59.219-0800: 0.922: [Full GC (Ergonomics) [PSYoungGen: 19519K->0K(116736K)] [ParOldGen: 332353K->314535K(349696K)] 351873K->314535K(466432K), [Metaspace: 2722K->2722K(1056768K)], 0.0488877 secs] [Times: user=0.19 sys=0.00, real=0.05 secs] 
+2020-10-27T11:47:59.278-0800: 0.981: [Full GC (Ergonomics) [PSYoungGen: 58802K->0K(116736K)] [ParOldGen: 314535K->312410K(349696K)] 373338K->312410K(466432K), [Metaspace: 2722K->2722K(1056768K)], 0.0487516 secs] [Times: user=0.18 sys=0.01, real=0.05 secs] 
+2020-10-27T11:47:59.338-0800: 1.041: [GC (Allocation Failure) [PSYoungGen: 58765K->24382K(116736K)] 371176K->336793K(466432K), 0.0045572 secs] [Times: user=0.01 sys=0.00, real=0.01 secs] 
+2020-10-27T11:47:59.354-0800: 1.056: [GC (Allocation Failure) [PSYoungGen: 83262K->22170K(116736K)] 395673K->358316K(466432K), 0.0083098 secs] [Times: user=0.03 sys=0.00, real=0.01 secs] 
+2020-10-27T11:47:59.363-0800: 1.065: [Full GC (Ergonomics) [PSYoungGen: 22170K->0K(116736K)] [ParOldGen: 336145K->324034K(349696K)] 358316K->324034K(466432K), [Metaspace: 2722K->2722K(1056768K)], 0.0492173 secs] [Times: user=0.19 sys=0.00, real=0.05 secs] 
+Heap
+ PSYoungGen      total 116736K, used 2509K [0x00000007b5580000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 58880K, 4% used [0x00000007b5580000,0x00000007b57f3488,0x00000007b8f00000)
+  from space 57856K, 0% used [0x00000007bc780000,0x00000007bc780000,0x00000007c0000000)
+  to   space 57856K, 0% used [0x00000007b8f00000,0x00000007b8f00000,0x00000007bc780000)
+ ParOldGen       total 349696K, used 324034K [0x00000007a0000000, 0x00000007b5580000, 0x00000007b5580000)
+  object space 349696K, 92% used [0x00000007a0000000,0x00000007b3c70b98,0x00000007b5580000)
+ Metaspace       used 2728K, capacity 4486K, committed 4864K, reserved 1056768K
+  class space    used 296K, capacity 386K, committed 512K, reserved 1048576K
