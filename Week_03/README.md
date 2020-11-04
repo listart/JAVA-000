@@ -300,3 +300,41 @@ Transfer/sec:      3.18MB
 
   
 
+## Netty Http Gateway Server
+
+### 压测结果
+
+```bash
+listart@Listart-Pro homework$ wrk -c 40 -d 30s --latency http://localhost:8888/api/hello
+Running 30s test @ http://localhost:8888/api/hello
+  2 threads and 40 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   479.39ms  192.89ms   1.35s    71.65%
+    Req/Sec    45.42     30.11   191.00     70.00%
+  Latency Distribution
+     50%  458.72ms
+     75%  580.50ms
+     90%  717.92ms
+     99%    1.10s 
+  2505 requests in 30.08s, 173.69KB read
+Requests/sec:     83.27
+Transfer/sec:      5.77KB
+```
+
+### 小结
+
+1. rps仅比单线程HttpServer多一倍，P99甚至达到1.1s，主要问题出在outbound端其实相当于单线程调用backend。
+
+### 遗留问题
+
+1. outbound在inboundhandler线程中，单线程运行
+
+2. outbound中client connection总是断开再连接，消耗大量连接时间
+
+3. filter暂时硬编码实现如下：
+
+   ```java
+   req.headers().set(USER_AGENT, "gateway");
+   ```
+
+   
