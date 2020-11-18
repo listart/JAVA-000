@@ -1,2 +1,4 @@
-package io.listart.spring.ioc.domain;public class School {
+package io.listart.spring.ioc.domain;
+
+public class School {
 }

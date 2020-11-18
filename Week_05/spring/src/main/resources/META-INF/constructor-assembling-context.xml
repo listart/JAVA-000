@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- constructor-based assembling bean -->
+    <bean id="s1908000" class="io.listart.spring.ioc.domain.Student"/>
+
+    <!-- constructor-based assembling bean with constructor arg -->
+    <bean id="s1908001" class="io.listart.spring.ioc.domain.Student">
+        <constructor-arg value="1908001"/>
+        <constructor-arg value="姜大牙"/>
+    </bean>
+
+    <!-- constructor-based assembling bean with constructor arg byType -->
+    <bean id="s1908002" class="io.listart.spring.ioc.domain.Student">
+        <constructor-arg type="int" value="1908002"/>
+        <constructor-arg type="java.lang.String" value="铁头"/>
+    </bean>
+
+    <!-- constructor-based assembling bean with constructor arg byIndex -->
+    <bean id="s1908003" class="io.listart.spring.ioc.domain.Student">
+        <constructor-arg index="0" value="1908003"/>
+        <constructor-arg index="1" value="铁头"/>
+    </bean>
+
+    <!-- constructor-based assembling bean with constructor arg byName -->
+    <bean id="s1908004" class="io.listart.spring.ioc.domain.Student">
+        <constructor-arg name="id" value="1908004"/>
+        <constructor-arg name="name" value="车驰"/>
+    </bean>
+
+    <!-- static factory method assembling bean -->
+    <bean id="s1908005" class="io.listart.spring.ioc.domain.Student" factory-method="createInstance">
+        <constructor-arg value="1908005"/>
+        <constructor-arg value="李黎"/>
+    </bean>
+
+    <!-- XML Shortcut with the c-namespace -->
+    <bean id="s1908006" class="io.listart.spring.ioc.domain.Student" c:id="1908006" c:name="郝静"/>
+
+</beans>
