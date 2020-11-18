@@ -65,6 +65,8 @@
 
 
 
+
+
 # Week05（周六）
 
 ## 4* 自动配置和starter
@@ -72,6 +74,8 @@
 给前面课程提供的 Student/Klass/School 实现自动配置和 Starter。
 
 > ***NOTE*** 中文配置乱码问题： `application.properties`不支持UTF8中文，可以使用`application.yaml`。
+
+
 
 
 
