@@ -105,3 +105,7 @@ Statement、ResultSet之类的本地变量，可以通过try with resources的�
 
 > ***NOTE*** 进行多个数据库操作时，尤其批处理，需要先`Connection.setAutoCommit(false)`
 
+
+
+> ***NOTE*** [Hikari官网](https://github.com/brettwooldridge/HikariCP)
+

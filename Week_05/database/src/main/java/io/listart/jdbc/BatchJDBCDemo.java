@@ -21,7 +21,7 @@ public class BatchJDBCDemo extends RawJDBCDemo {
         create100User(connection);
     }
 
-    private static void create100User(final Connection connection) throws SQLException {
+    public static void create100User(final Connection connection) throws SQLException {
         String sql = "insert into user(name, password) values(?,?)";
 
         try {
