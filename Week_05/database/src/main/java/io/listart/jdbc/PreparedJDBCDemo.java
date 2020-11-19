@@ -10,9 +10,10 @@ public class PreparedJDBCDemo extends RawJDBCDemo {
         // 准备数据库环境
         Connection connection = getConnection();
 
-        // 禁用事务
-        assert connection != null;
-        connection.setAutoCommit(false);
+        if (connection == null) {
+            System.out.println("获取连接失败！");
+            return;
+        }
 
         // 原始插入用户并查询
         int newUserId = insertUser(connection);

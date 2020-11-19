@@ -15,7 +15,11 @@ public class RawJDBCDemo {
         // 准备数据库环境
         Connection connection = getConnection();
 
-        assert connection != null;
+        if (connection == null) {
+            System.out.println("获取连接失败！");
+            return;
+        }
+
         // 原始插入用户并查询
         int newUserId = insertUser(connection);
         queryUser(connection, newUserId);
