@@ -1,50 +1,97 @@
 package io.listart.jdbc;
 
+import io.listart.domain.User;
+
 import java.sql.*;
 
 public class RawJDBCDemo {
     public static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-    public static final String URL = "jdbc:mysql://localhost:3306/sample_db";
+    public static final String URL = "jdbc:mysql://localhost:3306";
     public static final String SCHEMA = "sample_db";
     public static final String USER = "root";
     public static final String PASSWORD = "123456";
 
-    protected static Integer userId = null;
-
     public static void main(String[] args) throws SQLException {
+        // 准备数据库环境
         Connection connection = getConnection();
 
         assert connection != null;
-        insertUser(connection);
-//        queryUser(connection);
-//        updateUser(connection);
-//        deleteUser(connection);
+        // 原始插入用户并查询
+        int newUserId = insertUser(connection);
+        queryUser(connection, newUserId);
+
+        // 更新用户并查询
+        updateUser(connection, newUserId);
+        queryUser(connection, newUserId);
+
+        // 删除并查询
+        deleteUser(connection, newUserId);
+        queryUser(connection, newUserId);
     }
 
-    private static void deleteUser(Connection connection) {
+    private static void deleteUser(Connection connection, final int userId) throws SQLException {
+        String sql = "delete from user where id=" + userId;
+
+        System.out.println("RawJDBCDemo.deleteUser:" + sql);
+
+        try (Statement stmt = connection.createStatement()) {
+            int effectRows = stmt.executeUpdate(sql);
+
+            System.out.println("effectRows = " + effectRows);
+        }
     }
 
-    private static void updateUser(Connection connection) {
+    private static void updateUser(Connection connection, final int userId) throws SQLException {
+        String sql = "update user set password='passwordChanged' where id=" + userId;
+
+        System.out.println("RawJDBCDemo.updateUser:" + sql);
+
+        try (Statement stmt = connection.createStatement()) {
+            int effectRows = stmt.executeUpdate(sql);
+
+            System.out.println("effectRows = " + effectRows);
+        }
     }
 
-    private static void queryUser(Connection connection) {
+    private static void queryUser(Connection connection, final int userId) throws SQLException {
+        String sql = "select * from user where id=" + userId;
+
+        System.out.println("RawJDBCDemo.queryUser:" + sql);
+
+        try (Statement stmt = connection.createStatement()) {
+            try (ResultSet rs = stmt.executeQuery(sql)) {
+                while (rs.next()) {
+                    Integer id = rs.getInt("id");
+                    String name = rs.getString("name");
+                    String password = rs.getString("password");
+
+                    User user = new User(id, name, password);
+
+                    System.out.println("user = " + user);
+                }
+            }
+        }
     }
 
-    protected static void insertUser(final Connection connection) throws SQLException {
+    protected static Integer insertUser(final Connection connection) throws SQLException {
         String sql = "INSERT INTO user (name,password) VALUES (\"name\",\"password\")";
-        Statement stmt = connection.createStatement();
-        int effectRows = stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
 
-        ResultSet rs = stmt.getGeneratedKeys();
-        rs.next();
-        userId = rs.getInt(1);
+        System.out.println("RawJDBCDemo.insertUser:" + sql);
 
-        System.out.println("RawJDBCDemo.insertUser " + sql);
-        System.out.println("effectRows = " + effectRows);
-        System.out.println("userId = " + userId);
+        try (Statement stmt = connection.createStatement()) {
+            int effectRows = stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
 
-        rs.close();
-        stmt.close();
+            try (ResultSet rs = stmt.getGeneratedKeys()) {
+                rs.next();
+
+                Integer userId = rs.getInt(1);
+
+                System.out.println("effectRows = " + effectRows);
+                System.out.println("userId = " + userId);
+
+                return userId;
+            }
+        }
     }
 
     protected static void executeSql(final Connection connection, final String sql) throws SQLException {
@@ -69,12 +116,16 @@ public class RawJDBCDemo {
 
     protected static Connection getConnection() {
         try {
+            // 尝试获取jdbc驱动类
             Class.forName(DRIVER);
 
+            // 获取连接
             Connection cnn = DriverManager.getConnection(URL, USER, PASSWORD);
 
+            // 准备缺省数据库
             createDefaultSchema(cnn);
 
+            // 准备缺省user表
             createDefaultTable(cnn);
 
             return cnn;
