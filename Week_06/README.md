@@ -106,6 +106,23 @@ DDL文件  [ec_structure.sql](ec_structure.sql)
 
 ## 解析SQL
 
+暂只支持select * from TABLE
+
+安装环境参考antlr4官网，测试命令行如下：
+
+```bash
+listart@Listart-Pro sql$ antlr4 SQL.g4
+listart@Listart-Pro sql$ javac *.java
+listart@Listart-Pro sql$ grun SQL dql -tokens test.sql
+[@0,0:5='select',<'select'>,1:0]
+[@1,7:7='*',<'*'>,1:7]
+[@2,9:12='from',<'from'>,1:9]
+[@3,14:15='t1',<TABLE>,1:14]
+[@4,18:17='<EOF>',<EOF>,3:0]
+```
+
+
+
 > 参考资料
 >
 > [1] **《The Definitive ANTLR 4 Reference》**  by Terence Parr [官网](https://www.antlr.org/) | [grammars-v4库](https://github.com/antlr/grammars-v4) | [下载地址](https://github.com/joaoBordalo/feup-COMP/blob/master/The%20Definitive%20ANTLR%204%20Reference.pdf)
