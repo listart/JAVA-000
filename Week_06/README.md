@@ -102,3 +102,15 @@ DDL文件  [ec_structure.sql](ec_structure.sql)
 >
 > 订单数据主要由三张数据库表组成，主订单表对应的就是用户的一个订单，每提交一次都会生成一条主订单表的数据。在有些情况下，用户可能在一个订单中选择不同卖家的商品，而每个卖家又会按照该订单中自己提供的商品计算相关的商品优惠（如满 100 元减 10 元）以及按照不同的收货地址设置不同的物流配送，所以会出现子订单的相关概念，即一个主订单会由多个子订单组成，而真正对应到具体每个商品订单信息，则保存在订单详情表中。
 
+
+
+## 解析SQL
+
+> 参考资料
+>
+> [1] **《The Definitive ANTLR 4 Reference》**  by Terence Parr [官网](https://www.antlr.org/) | [grammars-v4库](https://github.com/antlr/grammars-v4) | [下载地址](https://github.com/joaoBordalo/feup-COMP/blob/master/The%20Definitive%20ANTLR%204%20Reference.pdf)
+>
+> [2] [ANTLR 4进阶](https://liangshuang.name/2017/08/20/antlr/) from liangshuang.name
+>
+> [3] [ANTLR4 笔记](https://abcdabcd987.com/notes-on-antlr4/) [ANTLR4 使用技巧](https://abcdabcd987.com/using-antlr4/) from abcdabcd987.com
+
