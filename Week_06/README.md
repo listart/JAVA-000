@@ -130,4 +130,6 @@ listart@Listart-Pro sql$ grun SQL dql -tokens test.sql
 > [2] [ANTLR 4进阶](https://liangshuang.name/2017/08/20/antlr/) from liangshuang.name
 >
 > [3] [ANTLR4 笔记](https://abcdabcd987.com/notes-on-antlr4/) [ANTLR4 使用技巧](https://abcdabcd987.com/using-antlr4/) from abcdabcd987.com
+>
+> [4] [mysql grammar.v4](https://github.com/mysql/mysql-workbench/tree/8.0/library/parsers/grammars) from Mysql Workbench by Oracle
 
