@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `ec`.`order` (
   `shipping_status` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0,
   `user_id` BIGINT(18) NOT NULL,
   `consignee` VARCHAR(60) NOT NULL DEFAULT '' COMMENT '收件人',
-  `address` VARCHAR(255) GENERATED ALWAYS AS (''),
+  `address` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '收件地址',
   `mobile` VARCHAR(45) NOT NULL DEFAULT '',
   `pay_id` BIGINT(18) NOT NULL DEFAULT 0,
   `pay_name` VARCHAR(120) NOT NULL DEFAULT '',

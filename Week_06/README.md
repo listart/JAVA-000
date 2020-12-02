@@ -121,7 +121,7 @@ listart@Listart-Pro sql$ grun SQL dql -tokens test.sql
 [@4,18:17='<EOF>',<EOF>,3:0]
 ```
 
-
+> ***TODO*** 建立解析SQL的maven工程，把ANTLR4集成到工程中，妥善处理生成文件以及开发类依赖。
 
 > 参考资料
 >
